@@ -14,7 +14,7 @@ module.exports = {
 
   // 번들링을 시작할 파일
   entry: {
-    index: './src/app.js',
+    index: './src/main.js',
   },
 
   // 다양한 모듈들(js, image, css 등)을 처리하는 방법 결정
