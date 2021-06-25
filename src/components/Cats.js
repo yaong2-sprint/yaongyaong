@@ -1,21 +1,21 @@
 /* eslint-disable no-console */
-import API_ENDPOINT from '../api/theCatAPI';
+import { getRandomImageAPI } from '../api';
 
 export default async function Cats() {
   try {
-    const res = await fetch(`${API_ENDPOINT}/images/search?limit=100`);
+    const res = await getRandomImageAPI();
     const datas = res.json();
     let template = '';
     await datas.then((cat) => {
       cat.forEach((el) => {
         template += `
-          <div style="display:inline">
-            <img style="width:33%;height:300px;" src="${el.url}" />
+          <div class="max-small">
+            <img class="cat-image" src="${el.url}" />
           </div>`;
       });
     });
 
-    return `<div style="margin-top:20px;"${template}</div>`;
+    return `<div class="template" ${template}</div>`;
   } catch (error) {
     console.log(error);
   }

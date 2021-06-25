@@ -1,6 +1,6 @@
-import Header from './components/Header';
-import Searchbar from './components/Searchbar';
-import Cats from './components/Cats';
+import Header from '@components/Header';
+import Searchbar from '@components/Searchbar';
+import Cats from '@components/Cats';
 // import API_ENDPOINT from './api/theCatAPI';
 
 export default async function App() {
