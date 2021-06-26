@@ -1,6 +1,12 @@
 .max-small {
-  width: auto;
-  height: auto;
-  max-width: 100px;
-  max-height: 100px;
+  display: inline;
+}
+
+.cat-image {
+  width: 33%;
+  height: 300px;
+}
+
+.template {
+  margin-top: 15px;
 }

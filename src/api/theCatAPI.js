@@ -1,3 +1,7 @@
-const API_ENDPOINT = 'https://api.thecatapi.com/v1';
+import myFetch from './APIUtils';
 
-export default API_ENDPOINT;
+export const getRandomImageAPI = async () =>
+  await myFetch({
+    url: `/images/search?limit=100`,
+    type: 'get',
+  });

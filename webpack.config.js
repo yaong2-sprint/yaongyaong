@@ -22,7 +22,7 @@ module.exports = {
     rules: [
       {
         // 처리할 모듈 형식 결정
-        test: /.js$/,
+        test: /\.js?$/,
         // 이 모듈에 사용할 loader
         use: 'babel-loader',
         // 제외할 파일들
@@ -64,6 +64,14 @@ module.exports = {
     publicPath: '/',
   },
 
+  resolve: {
+    extensions: ['.js'],
+    alias: {
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@scss': path.resolve(__dirname, 'src/scss'),
+      '@api': path.resolve(__dirname, 'src/api'),
+    },
+  },
   // 번들링 된 파일이 생성될 위치 설정
   output: {
     path: path.resolve(__dirname, 'dist'),
